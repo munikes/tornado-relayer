@@ -7,8 +7,8 @@ docker-compose.yml contains a stack that will automatically provision SSL certif
 1. Download [docker-compose.yml](/docker-compose.yml) and [.env.example](/.env.example)
 
 ```
-wget https://raw.githubusercontent.com/tornadocash/tornado-relayer/master/docker-compose.yml
-wget https://raw.githubusercontent.com/tornadocash/tornado-relayer/master/.env.example -O .env
+wget https://raw.githubusercontent.com/tornadocashdev/tornado-relayer/master/docker-compose.yml
+wget https://raw.githubusercontent.com/tornadocashdev/tornado-relayer/master/.env.example -O .env
 ```
 
 2. Setup environment variables
@@ -47,7 +47,7 @@ curl -X POST -H 'content-type:application/json' --data '<input data>' http://127
 Relayer should return a transaction hash
 
 In that case you will need to add https termination yourself because browsers with default settings will prevent https
-tornado.cash UI from submitting your request over http connection
+tornadoeth.cash UI from submitting your request over http connection
 
 ## Run geth node
 
