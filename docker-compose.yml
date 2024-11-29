@@ -119,13 +119,14 @@ services:
     volumes:
       - html:/usr/share/nginx/html
       - certs:/etc/nginx/certs:ro
-      - vhost:/etc/nginx/vhost.d
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
   letsencrypt:
     image: nginxproxy/acme-companion
     container_name: letsencrypt
     restart: always
+    environment:
+      ACME_CA_URI: https://acme.zerossl.com/v2/DV90
     volumes_from:
       - nginx-proxy
     volumes:
